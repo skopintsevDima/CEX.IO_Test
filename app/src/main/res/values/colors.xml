@@ -3,4 +3,14 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="movieItemBackground1">@color/darkBlue</color>
+    <color name="movieItemBackground2">@color/darkOrange</color>
+    <color name="movieItemBackground3">@color/darkGreen</color>
+    <color name="movieItemBackground4">@color/darkRed</color>
+
+    <color name="darkBlue">#BB5050DB</color>
+    <color name="darkOrange">#D6A04D</color>
+    <color name="darkGreen">#47C250</color>
+    <color name="darkRed">#DE4A36</color>
 </resources>

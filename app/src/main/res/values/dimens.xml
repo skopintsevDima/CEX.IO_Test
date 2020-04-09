@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="movieItemHeight">300dp</dimen>
+    <dimen name="posterWidth">150dp</dimen>
+    <dimen name="posterHeight">200dp</dimen>
+    <dimen name="posterMargin">16dp</dimen>
+    <dimen name="voteMargin">16dp</dimen>
+    <dimen name="titleMargin">8dp</dimen>
+    <dimen name="overviewMargin">8dp</dimen>
+
+    <dimen name="textBig">18sp</dimen>
+    <dimen name="textMedium">16sp</dimen>
+    <dimen name="textSmall">14sp</dimen>
+</resources>

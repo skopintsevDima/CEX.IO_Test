@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/movieItemHeight">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/moviePoster"
+        android:layout_width="@dimen/posterWidth"
+        android:layout_height="@dimen/posterHeight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/posterMargin"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/movieVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textBig"
+        tools:text="Vote: 7.7"
+        app:layout_constraintTop_toBottomOf="@id/moviePoster"
+        app:layout_constraintStart_toStartOf="@id/moviePoster"
+        app:layout_constraintEnd_toEndOf="@id/moviePoster"
+        android:layout_marginTop="@dimen/voteMargin"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/movieTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textMedium"
+        android:textAlignment="center"
+        android:ellipsize="end"
+        tools:text="Avengers: Infinity War"
+        app:layout_constraintTop_toTopOf="@id/moviePoster"
+        app:layout_constraintStart_toEndOf="@id/moviePoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/titleMargin"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/movieOverview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSmall"
+        android:ellipsize="end"
+        android:scrollbars="vertical"
+        android:textAlignment="gravity"
+        tools:text="Avengers: Infinity War description"
+        app:layout_constraintTop_toBottomOf="@id/movieTitle"
+        app:layout_constraintBottom_toBottomOf="@id/movieVote"
+        app:layout_constraintStart_toEndOf="@id/moviePoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/overviewMargin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

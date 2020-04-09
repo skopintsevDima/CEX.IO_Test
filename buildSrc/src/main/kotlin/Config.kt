@@ -1,23 +1,27 @@
 object Config {
+    //TODO: Remove unused dependencies
     private object Versions {
         // Tools
         const val kotlinVersion = "1.3.61"
         const val androidGradleVersion = "3.5.3"
         const val ktxCoreVersion = "1.1.0"
-        const val navigationVersion = "2.2.0"
 
         // Android
         const val appcompatVersion = "1.1.0"
-        const val materialVersion = "1.2.0-alpha04"
+        const val materialVersion = "1.1.0"
         const val constraintLayoutVersion = "1.1.3"
-        const val legacySupportVersion = "1.0.0"
+        const val recyclerViewVersion = "1.1.0"
+        const val swipeRefreshLayoutVersion = "1.0.0"
         const val viewModelVersion = "2.2.0"
+        const val roomVersion = "2.2.5"
 
         // Third-party libs
-        const val picassoVersion = "2.5.2"
-        const val retrofitVersion = "2.3.0"
-        const val okhttpVersion = "3.9.1"
-        const val koinVersion = "2.0.1"
+        const val retrofitVersion = "2.8.1"
+        const val gsonVersion = "2.8.6"
+        const val daggerVersion = "2.27"
+        const val rxAndroidVersion = "2.1.1"
+        const val rxJavaVersion = "2.2.19"
+        const val picassoVersion = "2.71828"
 
         // Testing libs
         const val junitVersion = "4.12"
@@ -34,7 +38,7 @@ object Config {
 
     object Android {
         const val buildToolsVersion = "29.0.2"
-        const val minSdkVersion = 19
+        const val minSdkVersion = 21
         const val targetSdkVersion = 29
         const val compileSdkVersion = 29
         const val applicationId = "com.test.cexiotest"
@@ -44,18 +48,24 @@ object Config {
         const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompatVersion}"
         const val material = "com.google.android.material:material:${Versions.materialVersion}"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
-        const val legacySupport = "androidx.legacy:legacy-support-v4:${Versions.legacySupportVersion}"
+        const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerViewVersion}"
+        const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayoutVersion}"
         const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewModelVersion}"
-        const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
-        const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
-        const val navigationSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigationVersion}"
+        const val room = "androidx.room:room-runtime:${Versions.roomVersion}"
+        const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
+        const val roomRxJava = "androidx.room:room-rxjava2:${Versions.roomVersion}"
     }
 
     object ThirdPartyLibs {
         const val picasso = "com.squareup.picasso:picasso:${Versions.picassoVersion}"
-        const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttpVersion}"
         const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
-        const val koinCore= "org.koin:koin-core:${Versions.koinVersion}"
+        const val retrofitRxJavaAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofitVersion}"
+        const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofitVersion}"
+        const val gson = "com.google.code.gson:gson:${Versions.gsonVersion}"
+        const val dagger = "com.google.dagger:dagger:${Versions.daggerVersion}"
+        const val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.daggerVersion}"
+        const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroidVersion}"
+        const val rxJava = "io.reactivex.rxjava2:rxjava:${Versions.rxJavaVersion}"
     }
 
     object TestingLibs {
