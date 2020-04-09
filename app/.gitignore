@@ -1,1 +1,3 @@
 /build
+#apikey.properties file should be excluded, but I added it for test purposes for you!
+#apikey.properties

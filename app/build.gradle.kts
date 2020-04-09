@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -16,10 +19,12 @@ android {
         versionCode = Config.Android.versionCode
         versionName = Config.Android.versionName
 
-        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+        val propsFile = file("apikey.properties")
+        val apiKeyProperties = Properties()
+        apiKeyProperties.load(FileInputStream(propsFile))
+        val apiKey = apiKeyProperties.getProperty(Config.Android.API_KEY_PROP_NAME)
+        buildConfigField("String", Config.Android.API_KEY_PROP_NAME, apiKey)
     }
-
-    dataBinding.isEnabled = true
 
     buildTypes {
         getByName("release") {
@@ -61,9 +66,4 @@ dependencies {
     implementation(Config.ThirdPartyLibs.rxJava)
     implementation(Config.ThirdPartyLibs.dagger)
     kapt(Config.ThirdPartyLibs.daggerCompiler)
-
-    testImplementation(Config.TestingLibs.junit)
-    testImplementation(Config.TestingLibs.androidxJunit)
-
-    androidTestImplementation(Config.TestingLibs.espressoCore)
 }

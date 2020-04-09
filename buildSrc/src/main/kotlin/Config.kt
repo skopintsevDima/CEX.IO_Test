@@ -1,5 +1,4 @@
 object Config {
-    //TODO: Remove unused dependencies
     private object Versions {
         // Tools
         const val kotlinVersion = "1.3.61"
@@ -22,11 +21,6 @@ object Config {
         const val rxAndroidVersion = "2.1.1"
         const val rxJavaVersion = "2.2.19"
         const val picassoVersion = "2.71828"
-
-        // Testing libs
-        const val junitVersion = "4.12"
-        const val androidxJunitVersion = "1.1.1"
-        const val espressoCoreVersion = "3.2.0"
     }
 
     object Tools {
@@ -44,6 +38,7 @@ object Config {
         const val applicationId = "com.test.cexiotest"
         const val versionCode = 1
         const val versionName = "1.0"
+        const val API_KEY_PROP_NAME = "API_KEY"
 
         const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompatVersion}"
         const val material = "com.google.android.material:material:${Versions.materialVersion}"
@@ -66,11 +61,5 @@ object Config {
         const val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.daggerVersion}"
         const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroidVersion}"
         const val rxJava = "io.reactivex.rxjava2:rxjava:${Versions.rxJavaVersion}"
-    }
-
-    object TestingLibs {
-        const val junit = "junit:junit:${Versions.junitVersion}"
-        const val androidxJunit = "androidx.test.ext:junit:${Versions.androidxJunitVersion}"
-        const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCoreVersion}"
     }
 }
